@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Especial 💖</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div>
+        <img src="Image/kitty 3.png" alt="Kitty" class="kitty1"> 
+        <img src="Image/kitty 4.png" alt="Kitty" class="kitty2">
+        <img src="Image/kitty 5.png" alt="Kitty" class="kitty3">
+        <img src="Image/kitty 5.png" alt="Kitty" class="kitty4">
+    </div>
+
+    <div class="pedido">
+        <img src="Image/kitty.png" alt="Kitty" class="kitty" />
+        <h1>Quer namorar comigo? 💖</h1>
+        <p>Você é muito especial para mim! Aceita ser meu amor?</p>
+        <div class="botoes">
+            <button class="botao-sim" onclick="sim()">Sim</button>
+            <button class="botao-nao" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+             
+        </div>
+    </div>
+    <div class="fotos">
+        <img src="Image/Imagem 1.jpg" alt="Foto 1">
+        <img src="Image/Imagem 2.jpg" alt="Foto 2">
+        <img src="Image/Imagem 3.jpg" alt="Foto 3">
+        <img src="Image/Imagem 4.jpg" alt="Foto 4">
+        <img src="Image/Imagem 5.jpg" alt="Foto 5">
+        <img src="Image/Imagem 6.jpg" alt="Foto 6">
+        
+    </div> 
+    <p id="mensagem" class="mensagem"></p>
+     
+     <!-- Player de Música -->
+  <div class="player-container">
+    <div id="player">
+    <div id="playerLeft">
+      <img src="Image/album.jpg" alt="Capa do Álbum" id="albumCover">
+      <div id="songInfo">
+        <p id="songTitle">No Escuro</p>
+        <p id="artistName">Ana Gabriela</p>
+      </div>
+    </div>
+    
+    <div id="playerCenter">
+      <div id="playerControls">
+        <button id="prevBtn" title="Anterior">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="19,20 9,12 19,4" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+            <line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button id="playPauseBtn" title="Play/Pause">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5,3 19,12 5,21" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+          </svg>
+        </button>
+        <button id="nextBtn" title="Próximo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5,4 15,12 5,20" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+            <line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+      <div id="progressContainer">
+        <span id="currentTime">0:00</span>
+        <div id="progressBar">
+          <div id="progressFill"></div>
+          <input type="range" id="progressSlider" min="0" max="100" value="0">
+          <div class="slider-indicator" id="progressIndicator"></div>
+        </div>
+        <span id="totalTime">3:59</span>
+      </div>
+    </div>
+    
+    <div id="playerRight">
+      <div id="volumeControl">
+        <button id="volumeBtn" title="Volume">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 4.93C20.9447 6.80528 20.9447 9.89472 19.07 11.77" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 16.4774 10.9024 15.54 11.84" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div id="volumeSliderContainer">
+          <input type="range" id="volumeSlider" min="0" max="100" value="70" title="Volume">
+          <div id="volumeProgress"></div>
+          <div class="slider-indicator" id="volumeIndicator"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Canvas para fogos de artifício -->
+  <canvas id="fireworksCanvas"></canvas>
+  <audio id="audioPlayer" src="music/No Escuro.mp3" autoplay></audio>   
+  <script src="script.js" defer></script>
+</body>
+</html>
